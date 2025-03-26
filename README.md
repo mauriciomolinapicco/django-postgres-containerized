@@ -41,26 +41,16 @@ docker-compose exec web python manage.py migrate
 ### 5. Crear un superusuario (opcional):
 
 Si es necesario, crea un superusuario para acceder a la interfaz de administración de Django:
-
 docker-compose exec web python manage.py createsuperuser
-
-
 Sigue las indicaciones para crear una cuenta de superusuario.
 
-###Estructura del Proyecto
-docker-compose.yml: Define los servicios (Django y PostgreSQL) y sus configuraciones.
-
-Dockerfile: Especifica las instrucciones para construir el contenedor de Django.
-
-requirements.txt: Lista los paquetes Python requeridos, incluyendo Django y psycopg2.
-
-app/: Directorio de la aplicación Django que contiene configuraciones, modelos, vistas, etc.
-
-###Configuración
+### Configuración
 PostgreSQL: La base de datos está configurada con las siguientes credenciales (configuradas en docker-compose.yml):
 
 Usuario: django
+
 Contraseña: password
+
 Base de datos: mi_db
 
 Estas credenciales se utilizan en la configuración DATABASES dentro del archivo settings.py del proyecto Django.
